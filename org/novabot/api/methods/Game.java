@@ -9,7 +9,7 @@ import java.awt.image.BufferedImage;
 import org.novabot.storage.FieldStorage;
 
 /**
- * Basic Game methods
+ * Basic Game methods.
  * @version 0.1
  * @authors Tanner, Motheen
  */
@@ -19,7 +19,7 @@ public class Game {
 	public static final Rectangle MINIMAP = new Rectangle(551, 9, 152, 151);
 	
 	/**
-	 * Grabs the game image
+	 * Grabs the game image.
 	 * @return Game's BufferedImage
 	 */
 	public static BufferedImage getImage() {
