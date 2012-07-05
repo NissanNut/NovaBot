@@ -21,11 +21,10 @@ public class Random {
 	public static int random(final int min, final int max){
 		if (min == max)
 			return min;
-		
-		if (min > max)
-			return r.nextInt(min + 1 - max) + max;
-		
-		return r.nextInt(max + 1 - min) + min;
+		else if (min > max)
+			throw new IllegalArgumentException("Minimum is more than Maximum.");
+		else
+			return r.nextInt(max + 1 - min) + min;
 	}
 	
 	/**
@@ -33,9 +32,37 @@ public class Random {
 	 * @param r The rectangle
 	 * @return Point within the rectangle
 	 */
-	public static Point pointInRect(Rectangle r){
+	public static Point point(Rectangle r){
 		int x = random(r.x, r.x + r.width);
 		int y = random(r.y, r.y + r.height);
 		return new Point(x, y);
+	}
+	
+	public boolean nextBoolean(){
+		return r.nextBoolean();
+	}
+
+	public void nextBytes(byte[] bytes){
+		r.nextBytes(bytes);
+	}
+
+	public double nextDouble(){
+		return r.nextDouble();
+	}
+
+	public float nextFloat(){
+		return r.nextFloat();
+	}
+
+	public double nextGaussian(){
+		return r.nextGaussian();
+	}
+
+	public int nextInt(){
+		return r.nextInt();
+	}
+
+	public int nextInt(int i){
+		return r.nextInt(i);
 	}
 }

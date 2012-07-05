@@ -1,7 +1,10 @@
 package org.novabot.api.methods;
 
+import java.awt.Color;
 import java.awt.Point;
 import java.awt.Rectangle;
+
+import org.novabot.api.util.Random;
 
 /**
  * Basic Inventory class.
@@ -72,6 +75,29 @@ public class Inventory {
 			return new Point((int) bounds.x + bounds.width/2, (int) bounds.y + bounds.height/2);
 		}
 		
+		/**
+		 * Gets the colors within a slot.
+		 * @return Color Array
+		 */
+		public Color[] getColors(){
+			return ColorUtil.getColors(bounds);
+		}
+	}
+	
+	/**
+	 * Selects or clicks the specified slot.
+	 * @param slot The slot to be selected
+	 */
+	public void select(Slot slot){
+		Mouse.click(Random.point(slot.bounds));		
+	}
+	
+	/**
+	 * Gets the colors within the inventory.
+	 * @return Color Array
+	 */
+	public Color[] getColors(){
+		return ColorUtil.getColors(BOUNDS);
 	}
 	
 }

@@ -74,6 +74,14 @@ public class Tabs {
 		public boolean isOpen(){
 			return bounds.contains(ColorUtil.getPointWithColor(Game.getImage(), BOUNDS, OPEN_COLOR, 1));
 		}
+		
+		/**
+		 * Gets the colors within a tab.
+		 * @return Color Array
+		 */
+		public Color[] getColors(){
+			return ColorUtil.getColors(bounds);
+		}
 	}
 	
 	/**
@@ -81,7 +89,7 @@ public class Tabs {
 	 * @param tab The tab
 	 */
 	public void openTab(final Tab tab){
-			Mouse.click(Random.pointInRect(tab.bounds));
+			Mouse.click(Random.point(tab.bounds));
 	}
 	
 	/**

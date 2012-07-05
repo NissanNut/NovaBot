@@ -5,6 +5,7 @@ import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 import java.util.LinkedList;
+import java.util.List;
 
 import org.novabot.api.util.Random;
 
@@ -309,6 +310,50 @@ public class ColorUtil {
 	public static int getDistance(final Color c1, final Color c2) {
 		return getDistance(c1.getRed(), c1.getGreen(), c1.getBlue(),
 				c2.getRed(), c2.getGreen(), c2.getBlue());
+	}
+	
+	/**
+	 * Checks if two colors are similar
+	 * @param c1 Color 1
+	 * @param c2 Color 2
+	 * @param tol The tolerance
+	 * @return <tt>true</tt> if similar; else <tt>false</tt>
+	 */
+	public static boolean areSimilar(final Color c1, final Color c2, final int tol){
+		if (getDistance(c1, c1) <= tol)
+			return true;
+		else
+			return false;
+	}
+	
+	/**
+	 * Checks if two colors are similar
+	 * @param c1 Color 1
+	 * @param c2 Color 2
+	 * @return <tt>true</tt> if similar; else <tt>false</tt>
+	 */
+	public static boolean areSimilar(final Color c1, final Color c2){
+		if (getDistance(c1, c1) <= 1)
+			return true;
+		else
+			return false;
+	}
+	
+	/**
+	 * Grabs all the colors within a rectangle.
+	 * @param r The rectangle
+	 * @return Color The color array
+	 */
+	public static Color[] getColors(final Rectangle r){
+		List <Color> colors = new LinkedList<Color>();
+		for (int x = r.x; x < r.x + r.width; x++){
+			for (int y = r.y; y < r.y + r.height; y++){
+				final Point p = new Point(x, y);
+				if (Game.isPointValid(p))
+					colors.add(getColorAt(p));
+			}
+		}
+		return colors.toArray(new Color[colors.size()]);
 	}
 
 }
