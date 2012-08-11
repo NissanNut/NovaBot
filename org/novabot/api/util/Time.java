@@ -1,8 +1,5 @@
 package org.novabot.api.util;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-
 /**
  * Basic Time class.
  * @version 0.1
@@ -11,8 +8,8 @@ import java.text.SimpleDateFormat;
 public class Time {
 
 	/**
-	 * Sleeps the script for a specified ammount of time (in milliseconds)
-	 * @param millis The time to sleep
+	 * Sleeps the script for a specified amount of time (in milliseconds).
+	 * @param millis The time to sleep.
 	 */
 	public static void sleep(final int millis) {
 		try {
@@ -23,9 +20,9 @@ public class Time {
 	}
 	
 	/**
-	 * Sleeps a random amount of time between min and max
-	 * @param min The minimum amount of time
-	 * @param max The maximum amount of time
+	 * Sleeps a random amount of time between min and max.
+	 * @param min The minimum amount of time.
+	 * @param max The maximum amount of time.
 	 */
 	public static void sleep(final int min, final int max) {
 		sleep(Random.random(min, max));
@@ -33,7 +30,7 @@ public class Time {
 	
 	/**
 	 * Gets the systems time.
-	 * @return Current Time in Milliseconds
+	 * @return Current Time in Milliseconds.
 	 */
 	public static long getTime(){
 		return System.currentTimeMillis();
@@ -41,8 +38,8 @@ public class Time {
 	
 	/**
 	 * Converts milliseconds to readable time in a string.
-	 * @param ms The time in milliseconds
-	 * @return String
+	 * @param ms The time in milliseconds.
+	 * @return the time as a string <tt>0:0:0</tt>
 	 */
 	public static String toString(final Long ms){
 		long s = ms/1000;

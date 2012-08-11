@@ -15,12 +15,12 @@ import org.novabot.storage.FieldStorage;
  */
 public class Game {
 	
-	public static final Rectangle VIEWPORT = new Rectangle(4, 4, 511, 333);
-	public static final Rectangle MINIMAP = new Rectangle(551, 9, 152, 151);
+	public static final Rectangle VIEWPORT = new Rectangle(4, 54, 511, 333);
+	public static final Rectangle MINIMAP = new Rectangle(551, 59, 152, 151);
 	
 	/**
 	 * Grabs the game image.
-	 * @return Game's BufferedImage
+	 * @return Game's BufferedImage.
 	 */
 	public static BufferedImage getImage() {
 		return (BufferedImage) FieldStorage.getFieldVal("gameimage");
@@ -28,8 +28,8 @@ public class Game {
 	
 	/**
 	 * Gets the color at a specific game point.
-	 * @param x The x coordinate
-	 * @param y The y coordinate
+	 * @param x The x coordinate.
+	 * @param y The y coordinate.
 	 * @return Color
 	 */
 	public static Color getColorAt(final int x, final int y) {
@@ -38,7 +38,7 @@ public class Game {
 	
 	/**
 	 * Gets the color at a specific game point.
-	 * @param p The point
+	 * @param p The point.
 	 * @return Color
 	 */
 	public static Color getColorAt(final Point p) {
@@ -46,7 +46,7 @@ public class Game {
 	}
 	
 	/**
-	 * Gets the dimensions of the game
+	 * Gets the dimensions of the game.
 	 * @return Dimension
 	 */
 	public static Dimension getSize() {
@@ -56,9 +56,9 @@ public class Game {
 	
 	/**
 	 * Checks if the game point is valid.
-	 * @param x The x coordinate
-	 * @param y The y coordinate
-	 * @return <tt>true</tt> if the point is valid and <tt>false</tt> if it is not
+	 * @param x The x coordinate.
+	 * @param y The y coordinate.
+	 * @return <tt>true</tt> if the point is valid and <tt>false</tt> if it is not.
 	 */
 	public static boolean isPointValid(final int x, final int y){
 		final Dimension d = getSize();
@@ -69,8 +69,8 @@ public class Game {
 	
 	/**
 	 * Checks if the game point is valid.
-	 * @param p The point
-	 * @return <tt>true</tt> if the point is valid and <tt>false</tt> if it is not
+	 * @param p The point.
+	 * @return <tt>true</tt> if the point is valid and <tt>false</tt> if it is not.
 	 */
 	public static boolean isPointValid(final Point p){
 		return isPointValid(p.x, p.y);

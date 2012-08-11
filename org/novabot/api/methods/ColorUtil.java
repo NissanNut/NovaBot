@@ -10,15 +10,15 @@ import java.util.List;
 import org.novabot.api.util.Random;
 
 /**
- * Novabots color utilities.
+ * Novabot basic color utilities.
  * @version 0.1
  * @author Tanner, Motheen
  */
 public class ColorUtil {
 
 	/**
-	 * Grabs all of the colors within an image
-	 * @param image The BufferedImage
+	 * Grabs all of the colors within an image.
+	 * @param image The BufferedImage.
 	 * @return Color[][]
 	 */
 	public static Color[][] getColors(final BufferedImage image) {
@@ -34,10 +34,10 @@ public class ColorUtil {
 	}
 	
 	/**
-	 * Gets color at a specific point
-	 * @param image The BufferedImage
-	 * @param x The x coordinate
-	 * @param y The y coordinate
+	 * Gets color at a specific point.
+	 * @param image The BufferedImage.
+	 * @param x The x coordinate.
+	 * @param y The y coordinate.
 	 * @return Color
 	 */
 	public static Color getColorAt(final BufferedImage image, final int x,
@@ -49,9 +49,9 @@ public class ColorUtil {
 	}
 	
 	/**
-	 * Gets color at a specific point
-	 * @param image The BufferedImage
-	 * @param p The point
+	 * Gets color at a specific point.
+	 * @param image The BufferedImage.
+	 * @param p The point.
 	 * @return Color
 	 */
 	public static Color getColorAt(final BufferedImage image, final Point p) {
@@ -62,9 +62,9 @@ public class ColorUtil {
 	}
 	
 	/**
-	 * Gets color at a specific point within the game
-	 * @param x The x coordinate
-	 * @param y The y coordinate
+	 * Gets color at a specific point within the game.
+	 * @param x The x coordinate.
+	 * @param y The y coordinate.
 	 * @return Color
 	 */
 	public static Color getColorAt(final int x, final int y) {
@@ -76,8 +76,8 @@ public class ColorUtil {
 	}
 	
 	/**
-	 * Gets color at a specific point within the game
-	 * @param p The point
+	 * Gets color at a specific point within the game.
+	 * @param p The point.
 	 * @return Color
 	 */
 	public static Color getColorAt(final Point p) {
@@ -89,11 +89,11 @@ public class ColorUtil {
 	}
 
 	/**
-	 * Lists the points with a specific color and tolerance within a rectangle
-	 * @param image The BufferedImage
-	 * @param bounds The bounds
-	 * @param color The Color
-	 * @param threshold The Tolerance
+	 * Lists the points with a specific color and tolerance within a rectangle.
+	 * @param image The BufferedImage.
+	 * @param bounds The bounds.
+	 * @param color The Color.
+	 * @param threshold The Tolerance.
 	 * @return LinkedList<Point>
 	 */
 	public static LinkedList<Point> getPointsWithColor(final BufferedImage image, final Rectangle bounds, final Color color, final int threshold) {
@@ -110,10 +110,10 @@ public class ColorUtil {
 	}
 	
 	/**
-	 * Lists the points with a specific color and tolerance within a rectangle
-	 * @param image The BufferedImage
-	 * @param color The Color
-	 * @param threshold The Tolerance
+	 * Lists the points with a specific color and tolerance within a rectangle.
+	 * @param image The BufferedImage.
+	 * @param color The Color.
+	 * @param threshold The Tolerance.
 	 * @return LinkedList<Point>
 	 */
 	public static LinkedList<Point> getPointsWithColor(final BufferedImage image, final Color color, final int threshold) {
@@ -131,10 +131,10 @@ public class ColorUtil {
 	}
 
 	/**
-	 * Lists the points with a specific color and tolerance within a rectangle
-	 * @param bounds The bounds
-	 * @param color The Color
-	 * @param threshold The Tolerance
+	 * Lists the points with a specific color and tolerance within a rectangle.
+	 * @param bounds The bounds.
+	 * @param color The Color.
+	 * @param threshold The Tolerance.
 	 * @return LinkedList<Point>
 	 */
 	public static LinkedList<Point> getPointsWithColor(final Rectangle bounds, final Color color, final int threshold) {
@@ -151,9 +151,9 @@ public class ColorUtil {
 	}
 	
 	/**
-	 * Lists the points with a specific color and tolerance
-	 * @param color The Color
-	 * @param threshold The Tolerance
+	 * Lists the points with a specific color and tolerance.
+	 * @param color The Color.
+	 * @param threshold The Tolerance.
 	 * @return LinkedList<Point>
 	 */
 	public static LinkedList<Point> getPointsWithColor(final Color color, final int threshold) {
@@ -172,9 +172,9 @@ public class ColorUtil {
 	}
 	
 	/**
-	 * Lists the points with a specific color
-	 * @param image The BufferedImage
-	 * @param color The Color
+	 * Lists the points with a specific color.
+	 * @param image The BufferedImage.
+	 * @param color The Color.
 	 * @return LinkedList<Point>
 	 */
 	public static LinkedList<Point> getPointsWithColor(final BufferedImage image, final Color color) {
@@ -192,8 +192,8 @@ public class ColorUtil {
 	}
 	
 	/**
-	 * Lists the points with a specific color
-	 * @param color The Color
+	 * Lists the points with a specific color.
+	 * @param color The Color.
 	 * @return LinkedList<Point>
 	 */
 	public static LinkedList<Point> getPointsWithColor(final Color color) {
@@ -213,10 +213,10 @@ public class ColorUtil {
 	
 	/**
 	 * Grabs a point with a color.
-	 * @param image The BufferedImage
-	 * @param bounds The bounds
-	 * @param color The Color
-	 * @param threshold The tolerance
+	 * @param image The BufferedImage.
+	 * @param bounds The bounds.
+	 * @param color The Color.
+	 * @param threshold The tolerance.
 	 * @return The Point
 	 */
 	public static Point getPointWithColor(final BufferedImage image, final Rectangle bounds, final Color color, final int threshold){
@@ -228,9 +228,9 @@ public class ColorUtil {
 	
 	/**
 	 * Grabs a point with a color.
-	 * @param image The BufferedImage
-	 * @param color The Color
-	 * @param threshold The tolerance
+	 * @param image The BufferedImage.
+	 * @param color The Color.
+	 * @param threshold The tolerance.
 	 * @return The Point
 	 */
 	public static Point getPointWithColor(final BufferedImage image, final Color color, final int threshold){
@@ -243,8 +243,8 @@ public class ColorUtil {
 	
 	/**
 	 * Grabs a point with a color.
-	 * @param image The BufferedImage
-	 * @param color The Color
+	 * @param image The BufferedImage.
+	 * @param color The Color.
 	 * @return The Point
 	 */
 	public static Point getPointWithColor(final BufferedImage image, final Color color){
@@ -257,8 +257,8 @@ public class ColorUtil {
 	
 	/**
 	 * Grabs a point with a color within the game.
-	 * @param color The Color
-	 * @param threshold The tolerance
+	 * @param color The Color.
+	 * @param threshold The tolerance.
 	 * @return The Point
 	 */
 	public static Point getPointWithColor(final Color color, final int threshold){
@@ -272,7 +272,7 @@ public class ColorUtil {
 	
 	/**
 	 * Grabs a point with a color within the game.
-	 * @param color The Color
+	 * @param color The Color.
 	 * @return The Point
 	 */
 	public static Point getPointWithColor(final Color color){
@@ -285,16 +285,16 @@ public class ColorUtil {
 	}
 	
 	/**
-	 * Gets the threshold distance between two colors
-	 * @param r1 Color 1, red
-	 * @param g1 Color 1, green
-	 * @param b1 Color 1, blue
-	 * @param r2 Color 2, red
-	 * @param g2 Color 2, green
-	 * @param b2 Color 2, blue
+	 * Gets the threshold distance between two colors.
+	 * @param r1 Color 1, red.
+	 * @param g1 Color 1, green.
+	 * @param b1 Color 1, blue.
+	 * @param r2 Color 2, red.
+	 * @param g2 Color 2, green.
+	 * @param b2 Color 2, blue.
 	 * @return int threshold
 	 */
-	public static int getDistance(int r1, int g1, int b1, int r2, int g2, int b2) {
+	public static int getDistance(final int r1, final int g1, final int b1, final int r2, final int g2, final int b2) {
 		int red = Math.abs(r2 - r1);
 		int green = Math.abs(g2 - g1);
 		int blue = Math.abs(b2 - b1);
@@ -302,9 +302,9 @@ public class ColorUtil {
 	}
 
 	/**
-	 * Gets the threshold distance between two colors
-	 * @param c1 Color 1
-	 * @param c2 Color 2
+	 * Gets the threshold distance between two colors.
+	 * @param c1 Color 1.
+	 * @param c2 Color 2.
 	 * @return int threshold
 	 */
 	public static int getDistance(final Color c1, final Color c2) {
@@ -313,11 +313,11 @@ public class ColorUtil {
 	}
 	
 	/**
-	 * Checks if two colors are similar
-	 * @param c1 Color 1
-	 * @param c2 Color 2
-	 * @param tol The tolerance
-	 * @return <tt>true</tt> if similar; else <tt>false</tt>
+	 * Checks if two colors are similar.
+	 * @param c1 Color 1.
+	 * @param c2 Color 2.
+	 * @param tol The tolerance.
+	 * @return <tt>true</tt> if similar; else <tt>false</tt>.
 	 */
 	public static boolean areSimilar(final Color c1, final Color c2, final int tol){
 		if (getDistance(c1, c1) <= tol)
@@ -327,10 +327,10 @@ public class ColorUtil {
 	}
 	
 	/**
-	 * Checks if two colors are similar
-	 * @param c1 Color 1
-	 * @param c2 Color 2
-	 * @return <tt>true</tt> if similar; else <tt>false</tt>
+	 * Checks if two colors are similar.
+	 * @param c1 Color 1.
+	 * @param c2 Color 2.
+	 * @return <tt>true</tt> if similar; else <tt>false</tt>.
 	 */
 	public static boolean areSimilar(final Color c1, final Color c2){
 		if (getDistance(c1, c1) <= 1)
@@ -341,8 +341,8 @@ public class ColorUtil {
 	
 	/**
 	 * Grabs all the colors within a rectangle.
-	 * @param r The rectangle
-	 * @return Color The color array
+	 * @param r The rectangle.
+	 * @return Color The color array.
 	 */
 	public static Color[] getColors(final Rectangle r){
 		List <Color> colors = new LinkedList<Color>();

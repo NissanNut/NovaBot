@@ -14,7 +14,6 @@ public class Timer {
 	
 	/**
 	 * Creates a new timer.
-	 * 
 	 * @param i, the length in milliseconds for the timer to count down from.
 	 */
 	public Timer(int duration){
@@ -33,7 +32,6 @@ public class Timer {
 
 	/**
 	 * Sets the timer's end (in milliseconds.)
-	 * 
 	 * @param d, the new end for the timer.
 	 */
 	public void endIn(long duration) {
@@ -43,6 +41,7 @@ public class Timer {
 	}
 	
 	/**
+	 * Checks if the time is running.
 	 * @return <tt>true</tt> if the timer is running and <tt>false</tt> if it is not.
 	 */
 	public boolean isRunning(){
@@ -50,6 +49,7 @@ public class Timer {
 	}
 	
 	/**
+	 * Gets the time remaining in a timer.
 	 * @return the remaining milliseconds left in the timer.
 	 */
 	public long getRemaining(){
